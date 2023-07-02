@@ -1,0 +1,251 @@
+/* 품목별 취소(X) 버튼 구현 못함
+   품목별 박스 사이즈 조절 못함(아래 input 박스와 비슷하게 조절하고 싶음) */
+
+@font-face {
+    font-family: 'SEBANG_Gothic_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{margin:0; padding:0;}
+
+body{
+    background-color: rgb(215, 208, 184);
+}
+
+#wrap{
+    background-color: white;
+    width:600px;
+    margin:0 auto;
+    display: grid;
+    grid-template-areas: 
+    "header1 header1"
+    "section section"
+    "footer1 footer1"
+    "footer2 footer2"
+    ;
+    grid-template-columns: 100px 500px;
+    grid-template-rows:  100px 800px 70px 40px;
+}
+
+/* 맨 위 배너 */
+
+#header1>h1{
+    color:#544866;
+    font-family: 'Lilita One';
+    font-size:43px;
+}
+
+#header1{
+    grid-area: header1;
+    background-color:white;
+    height: 90px;
+}
+
+/* 주문 목록 */
+
+#section{
+    height: 790px;
+    grid-area: section;
+    background-color: white;
+    display: grid;
+    grid-template-areas:
+    ". order1 ."
+    ". order2 ."
+    ". request .";
+    grid-template-columns: 50px 500px 50px;
+    grid-template-rows: 100px 100px 100px 100px;
+    border-radius: 0px 0px 20px 20px;
+}
+
+#order1,#order2{
+    margin-top: 10px;
+    background-color:white;
+    height: 90px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 150px 200px 100px;
+    grid-template-rows: 90px;
+    place-items: center;
+}
+
+#order1{
+    grid-area: order1;
+    grid-template-areas:
+    "circle1 ordername1 price1";
+    background-color: #E7F3FF;
+}
+
+#order2{
+    grid-area: order2;
+    grid-template-areas:
+    "circle2 ordername2 price2";
+    background-color: #FFF6EA;
+}
+
+#request{
+    margin-top: 30px;
+    background-color:white;
+    border-radius: 20px;
+    grid-area: request;
+    display: grid;
+    grid-template-areas:
+    ". r1 ."
+    ". r2 ."
+    ". input .";
+    grid-template-columns: 40px;
+    grid-template-rows: 30px 30px 100px;
+}
+
+#r1{
+    grid-area: r1;
+    font-family: 'SEBANG_Gothic_Bold';
+    color:#4F4F4F;
+}
+
+#r2{
+    grid-area: r2;
+    font-family: 'SEBANG_Gothic_Bold';
+    color:#9B9B9B;
+}
+
+#input{
+    grid-area: input;
+    width: 400px;
+    height: 200px;
+    background-color: #E6E6E6;
+    border: none;
+    border-radius: 20px;
+}
+
+#matter{
+    font-size: xx-small;
+    color: gray;
+}
+
+#price1,#price2{
+    width: 100px;
+}
+
+#price1>h2,#price2>h2{
+    color:rgb(0, 0, 0);
+    font-family: 'SEBANG_Gothic_Bold';
+}
+
+#ordername1,#ordername2{
+    width: 250px;
+    text-align: left;
+}
+
+/* 메뉴이름 색상 및 폰트 설정 */
+#ordername1>h3, #ordername1>h5{
+    color:rgb(0, 0, 0);
+    font-family: 'SEBANG_Gothic_Bold';
+}
+#ordername2>h3, #ordername2>h5{
+    color:rgb(0, 0, 0);
+    font-family: 'SEBANG_Gothic_Bold';
+}
+
+/* -----------footer부분--------------- */
+
+#footer1{
+    height: 100px;
+    grid-area: footer1;
+    background-color:white;
+    display: grid;
+    grid-template-areas:". btn .";
+    grid-template-columns: 25px 550px 25px;
+    grid-template-rows: 50px;
+    place-items: center;
+}
+
+#btn{
+    font-family: 'SEBANG_Gothic_Bold';
+    font-size: 20px;
+    color:#544866;
+    text-align: center;
+    grid-area: btn;
+    height: 60px;
+    width: 380px;
+    border: none;
+    background-color:#BBE4BF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+#btn:hover{
+    background-color: rgb(148, 225, 148);
+    transition: 0.7s;
+}
+
+/* ----메뉴/레시피/마이 구현----- */
+
+#footer2{
+    height: 100px;
+    grid-area: footer2;
+    background-color: white;
+    display: grid;
+    grid-template-areas: ". menu recipe my . ";
+    grid-template-columns: 25px 180px 180px 180px 25px ;
+    grid-template-rows: 100px;
+    place-items: center;
+}
+
+#menu{
+    font-size: larger;
+    text-align: center;
+    grid-area: menu;
+    background-color:white;
+    height: 10px;
+    width: 170px;
+    border: none;
+    font-family: 'SEBANG_Gothic_Bold'
+}
+
+#recipe{
+    font-size: larger;
+    grid-area: recipe;
+    background-color:white;
+    height: 10px;
+    width: 170px;
+    border:none;
+    font-family: 'SEBANG_Gothic_Bold'
+}
+
+#my{
+    font-size: larger;
+    grid-area: my;
+    background-color:white;
+    height: 10px;
+    width: 170px;
+    border:none;
+    font-family: 'SEBANG_Gothic_Bold'
+}
+
+/* 버튼꾸미기 */
+#minus{
+    width: 20px;
+}
+
+#minus,#plus,#result1,#result2{
+    border:none;
+    font-size: large;
+    background-color: transparent;
+    display: inline-block;
+}
+
+/* 주문하기 버튼에 표시되는 가격 */
+#total{
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 20px;
+    color:#544866;
+}
+
+/* 이모지 */
+#circle1>h3,#circle2>h3{
+   text-align: center;
+   font-size:28px;
+}

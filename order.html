@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="order.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <title>SWU Beetle Juice Order System</title>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header1"><br><br><h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspOrder</h1><br></div>
+        
+        <div id="section" style="overflow-x:hidden; height:790px; width:600px;"> 
+        <div id="blank"></div>
+        <div id="order1">
+            <div id="circle1">
+                <br><h3>🍵🌾</h3>
+            </div>
+            <div id="ordername1">
+                <h3>&nbsp&nbsp말미숙<a id="matter">&nbsp&nbsp말차그린+미숫</a><h5 id="price1">&nbsp&nbsp&nbsp4.5</h5></h3>
+            </div>
+            <div id="numbutton1">
+                <input type="button" id="minus" onclick='count1A()' value="-"><div id="result1">1</div>
+                <input type="button" id="plus"onclick='count1B()' value="+">
+            </div>
+        </div>
+
+        <div id="order2">
+            <div id="circle2">
+                <br><h3>🍫🌾</h3>
+            </div>
+             <div id="ordername2"><h3>&nbsp&nbsp초미숙<a id="matter">&nbsp&nbsp초코+미숫 </a><h5 id="price2">&nbsp&nbsp&nbsp4.5</h5></h3></div>
+             <div id="numbutton2">
+                <input type="button" id="minus" onclick='count2A()' value="-"><div id="result2">1</div>
+                <input type="button" id="plus"onclick='count2B()' value="+">
+            </div>
+        </div>
+        
+        <div id="request">
+            <div id="r1"><h3>요청사항</h3></div>
+            <div id="r2"><h4>ex. 시럽 조금만 넣어주세요</h4></div>
+            <input id="input" type="text">
+        </div>
+            
+    </div>
+        <div id="footer1">
+            <button type="button" id="btn">주문하기&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a id="total">0</a></button>
+        </div>
+        
+        <div id="footer2">
+            <button type="button" id="menu">메뉴</button>
+            <button type="button" id="recipe">레시피</button>
+            <button type="button" id="my">마이</button>
+        </div>
+    </div>
+    <script src="order.js"></script>
+</body>
+</html>
