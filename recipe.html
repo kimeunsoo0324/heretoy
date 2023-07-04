@@ -13,23 +13,12 @@
 </head>
 <body>
     <div id="wrap">
-        <div id="header1"><br><br><h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSwuni's Recipe</h1><br></div>
+        <div id="header1"><br><br><h1>Swuni's Recipe</h1><br></div>
         <div id="section" style="overflow-x:hidden; height:790px; width:600px;">
             <div id="menu1">
-                <br><h3 id="name">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp김은수&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a id="swurecipe">&nbsp&nbsp&nbsp&nbsp레몬+키위+사과&nbsp&nbsp&nbsp&nbsp</a></h3>
-                <br><h3 id="post">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp레몬, 키위, 사과 조합 <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp추천 드립니다.(찐)</h3>
-                <div class="toggle"><button id="ggim"><i class="fa-regular fa-heart fa-solid fa-heart"></i></button></div>
-            </div>
-
-            <div id="menu2">
-                <br><h3 id="name">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp길연진&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a id="swurecipe">&nbsp&nbsp&nbsp&nbsp자몽+오렌지&nbsp&nbsp&nbsp&nbsp</a></h3>
-                <br><h3 id="post">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp자몽+오렌지 추천!!! 상큼 그 자체라 <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp잠이 확 달아나요.</h3>
-                <div class="toggle"><button id="ggim"><i class="fa-regular fa-heart fa-solid fa-heart"></i></button></div>
-            </div>
-
-            <div id="menu3">
-                <br><h3 id="name">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp박현아&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a id="swurecipe">&nbsp&nbsp&nbsp&nbsp복숭아+살구+자두&nbsp&nbsp&nbsp&nbsp</a></h3>
-                <br><h3 id="post">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp복숭아+살구+자두 근본 조합</h3>
+                <br><h3 id="name">&nbsp&nbsp&nbsp&nbsp김은수&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a id="swurecipe">&nbsp&nbsp&nbsp&nbsp레몬+키위+사과&nbsp&nbsp&nbsp&nbsp</a></h3>
+                <br><h3 id="post">&nbsp&nbsp&nbsp&nbsp레몬, 키위, 사과 조합 <br>&nbsp&nbsp&nbsp&nbsp추천 드립니다.(찐)</h3>
+                <br><button id="update">수정</button><button id="delete">삭제</button>
                 <div class="toggle"><button id="ggim"><i class="fa-regular fa-heart fa-solid fa-heart"></i></button></div>
             </div>
         </div>
@@ -38,9 +27,13 @@
             </div>
 
             <div id="footer2">
-                <button type="button" id="menu" onclick="location.href='menu.html'">메뉴</button>
+                <a href="http://127.0.0.1:8000/" class="link" id="menu">메뉴</a>
+                <a href="http://127.0.0.1:8000/post/" class="link" id="recipe">레시피</a>
+                <a href="http://127.0.0.1:8000/users/{{ request.user.pk }}/likes/" class="link" id="my">마이</a>
+
+                <!-- <button type="button" id="menu" onclick="location.href='menu.html'">메뉴</button>
                 <button type="button" id="recipe" onclick="location.href='recipe.html'">레시피</button>
-                <button type="button" id="my" onclick="location.href='order2.html'">마이</button>
+                <button type="button" id="my" onclick="location.href='order2.html'">마이</button> -->
             </div>
         </div>
     </div>
