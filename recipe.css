@@ -182,6 +182,6 @@
     border: none;
     font-family: 'SEBANG_Gothic_Bold';
     margin: 0 10px;
-    color: #000000;
+    color: #000000; /*글자색 검정색으로 변경*/
     text-decoration: none; /* 하이퍼링크 밑줄 제거 */
 }
